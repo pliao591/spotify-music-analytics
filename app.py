@@ -133,9 +133,10 @@ if uploaded_file is not None:
             st.metric("Predicted Popularity", f"{prediction:.1f} / 100")
 
         st.caption(
-            "This linear regression model estimates track popularity "
-            "from 10 audio features. Predictions may be inaccurate because "
-            "popularity also depends on factors not included in this model."
+            "This model predicts a track's popularity score (0-100) using "
+            "10 audio features. Predictions may be inaccurate, especially "
+            "for inputs outside the training data's range, so treat them "
+            "as estimates rather than actual popularity scores."
         )
     else:
         st.warning(
